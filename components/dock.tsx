@@ -25,7 +25,7 @@ export function Dock() {
     { icon: Mail, label: "Email", href: "mailto:bhanudahiya8@gmail.com" },
   ];
   return (
-    <div className="pointer-events-auto fixed inset-x-0 bottom-4 z-50 flex justify-center">
+    <div className="pointer-events-auto fixed inset-x-0 bottom-6 z-50 flex justify-center">
       <nav
         aria-label="Quick actions"
         className="flex items-center gap-1 rounded-xl border border-neutral-200 bg-white/90 p-1.5 shadow-lg backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/80"
