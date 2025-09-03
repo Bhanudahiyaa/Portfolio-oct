@@ -36,6 +36,7 @@ export function WorkItem({
             <Icon className="h-4 w-4" aria-hidden="true" />
           )}
         </div>
+
         <div className="min-w-0">
           <div className="flex items-start justify-between gap-2">
             <h4 className="text-sm font-semibold text-neutral-900 dark:text-neutral-50 flex-1 min-w-0">

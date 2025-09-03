@@ -105,7 +105,7 @@ export function SkillsDraggable() {
           Skills
         </h3>
         <div className="pointer-events-none hidden text-[10px] text-slate-500 dark:text-slate-400 sm:block">
-          hover
+          hover on this 🤭
         </div>
       </div>
       <div className={cn("relative flex flex-wrap gap-2")}>

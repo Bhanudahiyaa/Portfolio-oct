@@ -9,7 +9,6 @@ import { AchievementItem } from "@/components/achievement-item";
 import { Dock } from "@/components/dock";
 import { SkillsDraggable } from "@/components/skills-draggable";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function Page() {
   return (

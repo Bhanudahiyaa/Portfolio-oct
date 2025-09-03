@@ -131,6 +131,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    zoom: 1.1;
   }
 
   /* Hide scrollbar for Chrome, Safari and Opera */
