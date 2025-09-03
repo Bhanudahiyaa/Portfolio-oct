@@ -48,19 +48,19 @@ export default function Page() {
           aria-label="Portfolio"
           className="relative rounded-2xl border border-neutral-200 bg-white shadow-sm dark:border-neutral-800 dark:bg-neutral-950"
         >
-          <div className="p-4 md:p-6 lg:p-8">
+          <div className="p-4 md:p-6 lg:p-6">
             {/* Header */}
             <header id="about" className="space-y-2 section-lines p-4">
               <p className="text-xs text-neutral-500">hi there 😊, I'm</p>
               <div className="flex items-center gap-3">
-                <Avatar className="h-16 w-16 ring-2 ring-neutral-200 dark:ring-neutral-800">
+                <Avatar className="h-16 w-16 ring-2  ring-neutral-200 dark:ring-neutral-900">
                   <AvatarImage
                     src="https://media.licdn.com/dms/image/v2/D4E03AQFoa40cJ2WOMA/profile-displayphoto-scale_400_400/B4EZgKXbIXGoAo-/0/1752520570498?e=1759968000&v=beta&t=cckryikVjD2X7Nvhcmw5I8B1w6sQofIPdTWlpbmkDSU"
                     alt="Bhanu Pratap Singh"
                   />
                   <AvatarFallback>BP</AvatarFallback>
                 </Avatar>
-                <h1 className="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
+                <h1 className="text-2xl md:text-3xl font-medium tracking-tight text-neutral-900 dark:text-neutral-50">
                   Bhanu Pratap Singh
                 </h1>
               </div>
@@ -148,7 +148,7 @@ export default function Page() {
             </header>
 
             {/* Bio */}
-            <section className="mt-4 text-[13px] leading-6 text-neutral-600 dark:text-neutral-300">
+            <section className="mt-4 m-2 justify-center iterms-center  text-[13px] leading-6 text-neutral-600 dark:text-neutral-300">
               <p>
                 A 20 year-old developer from India who loves building{" "}
                 <span className="rounded bg-yellow-200 px-1.5 py-0.5 text-[12px] font-medium text-neutral-900">
