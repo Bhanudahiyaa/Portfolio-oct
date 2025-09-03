@@ -50,7 +50,7 @@ export default function Page() {
         >
           <div className="p-4 md:p-6 lg:p-8">
             {/* Header */}
-            <header id="about" className="space-y-2">
+            <header id="about" className="space-y-2 section-lines p-4">
               <p className="text-xs text-neutral-500">hi there 😊, I'm</p>
               <div className="flex items-center gap-3">
                 <Avatar className="h-16 w-16 ring-2 ring-neutral-200 dark:ring-neutral-800">
@@ -161,11 +161,11 @@ export default function Page() {
             </section>
 
             {/* Work Experience */}
-            <section id="experience" className="mt-6">
+            <section id="experience" className="mt-6 section-lines p-4">
               <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-50">
                 Work Experience.
               </h3>
-              <div className="mt-3 space-y-4">
+              <div className="mt-3 space-y-3">
                 <WorkItem
                   icon="shield"
                   company="Stealth"
@@ -186,7 +186,7 @@ export default function Page() {
             </section>
 
             {/* Projects */}
-            <section id="projects" className="mt-8">
+            <section id="projects" className="mt-8 section-lines p-4">
               <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-50 mb-4">
                 Projects.
               </h3>
@@ -208,13 +208,7 @@ export default function Page() {
                     "Developed 12+ features: real-time charts, multilingual support (English, Hindi, Spanish),voice navigation using Web Speech API.",
                     "Integrated APIs for real-time financial analytics and sentiment analysis across 50+ tickers.",
                   ]}
-                  tags={[
-                    "React",
-                    "TypeScript",
-                    "TailwindCSS",
-                    "Supabase",
-                    "Web Speech API",
-                  ]}
+                  tags={["React", "TypeScript", "TailwindCSS", "Supabase"]}
                 />
                 <ProjectListItem
                   title="SQL QueryPilot"
@@ -271,7 +265,7 @@ export default function Page() {
               </div>
             </section>
 
-            <section id="achievements" className="mt-8 ">
+            <section id="achievements" className="mt-8 section-lines p-4">
               <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-50 mb-4">
                 Achievements.
               </h3>
@@ -293,12 +287,12 @@ export default function Page() {
               </ul>
             </section>
             {/* Skills */}
-            <section className="mt-5">
+            <section className="mt-5 section-lines p-4">
               <SkillsDraggable />
             </section>
 
             {/* Education */}
-            <section className="mt-8">
+            <section className="mt-8 section-lines p-4">
               <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-50 mb-4">
                 Education.
               </h3>
@@ -321,7 +315,7 @@ export default function Page() {
             </section>
 
             {/* Get in Touch */}
-            <section className="mt-8 text-center">
+            <section className="mt-8 text-center section-lines p-6">
               <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
                 {"Let's work together."}
               </h2>

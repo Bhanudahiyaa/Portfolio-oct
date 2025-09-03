@@ -41,7 +41,7 @@
 
   /* variables that drive the graph paper background */
   --grid-bg: #fafafa;
-  --grid-line: rgb(0 0 0 / 0.05);
+  --grid-line: rgb(0 0 0 / 0.03);
 }
 
 .dark {
@@ -159,6 +159,15 @@
     background-size: 26px 26px;
     background-position: center top;
     background-attachment: fixed;
+  }
+
+  .section-lines {
+    border: 1px solid rgba(156, 163, 175, 0.18);
+    border-radius: 8px;
+  }
+
+  .dark .section-lines {
+    border-color: rgba(107, 114, 128, 0.18);
   }
 
   .text-muted {

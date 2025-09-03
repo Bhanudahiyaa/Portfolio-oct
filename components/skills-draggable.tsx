@@ -50,7 +50,7 @@ function SkillPill({ label, icon }: Skill) {
         "bg-white text-neutral-600 border-neutral-200",
         "dark:bg-neutral-950 dark:text-neutral-300 dark:border-neutral-800"
       )}
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ scale: 1.15 }}
       transition={{ type: "spring", stiffness: 400, damping: 25 }}
       aria-label={label}
     >
@@ -99,7 +99,7 @@ export function SkillsDraggable() {
   ];
 
   return (
-    <div className="mt-4">
+    <div>
       <div className="mb-2 flex items-center justify-between">
         <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
           Skills
