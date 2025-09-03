@@ -122,6 +122,25 @@ export const metadata: Metadata = {
     "contact:country_name": "India",
     "contact:region": "Delhi",
     "contact:locality": "New Delhi",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:image:type": "image/png",
+    "og:image:alt": "Bhanu Pratap Singh - Full Stack Developer Portfolio",
+    "og:site_name": "Bhanu Pratap Singh Portfolio",
+    "og:locale": "en_US",
+    "og:type": "website",
+    "og:url": "https://bhanupratap.dev",
+    "og:title": "Bhanu Pratap Singh - Full Stack Developer",
+    "og:description":
+      "A 20 year-old Full Stack Developer from India who loves building efficient, scalable, and intuitive applications. Currently working as Founding Engineer at a stealth startup.",
+    "og:image": "https://iili.io/KB9qfG1.png",
+    "twitter:image:alt": "Bhanu Pratap Singh - Full Stack Developer Portfolio",
+    "twitter:domain": "bhanupratap.dev",
+    "twitter:url": "https://bhanupratap.dev",
+    "whatsapp:image": "https://iili.io/KB9qfG1.png",
+    "whatsapp:title": "Bhanu Pratap Singh - Full Stack Developer",
+    "whatsapp:description":
+      "A 20 year-old Full Stack Developer from India who loves building efficient, scalable, and intuitive applications.",
   },
 };
 

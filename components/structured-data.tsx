@@ -16,7 +16,7 @@ export default function StructuredData() {
         "https://media.licdn.com/dms/image/v2/D4E03AQFoa40cJ2WOMA/profile-displayphoto-scale_400_400/B4EZgKXbIXGoAo-/0/1752520570498?e=1759968000&v=beta&t=cckryikVjD2X7Nvhcmw5I8B1w6sQofIPdTWlpbmkDSU",
       email: "bhanudahiya8@gmail.com",
       nationality: "Indian",
-      birthDate: "2004",
+      birthDate: "2005",
       gender: "Male",
       address: {
         "@type": "PostalAddress",
