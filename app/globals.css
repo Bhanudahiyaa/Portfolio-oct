@@ -41,7 +41,7 @@
 
   /* variables that drive the graph paper background */
   --grid-bg: #fafafa;
-  --grid-line: rgb(0 0 0 / 0.035);
+  --grid-line: rgb(0 0 0 / 0.05);
 }
 
 .dark {
@@ -81,7 +81,7 @@
 
   /* dark values for the graph paper background */
   --grid-bg: rgb(10 10 10);
-  --grid-line: rgb(255 255 255 / 0.07);
+  --grid-line: rgb(255 255 255 / 0.065);
 }
 
 @theme inline {
@@ -132,15 +132,32 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  html {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 @layer utilities {
   .bg-grid {
     /* use variables so theme flips without duplicating selectors */
     background-color: var(--grid-bg);
-    background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    background-image: linear-gradient(
+        to right,
+        var(--grid-line) 1px,
+        transparent 1px
+      ),
       linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-    background-size: 28px 28px;
+    background-size: 26px 26px;
+    background-position: center top;
+    background-attachment: fixed;
   }
 
   .text-muted {

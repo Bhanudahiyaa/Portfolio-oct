@@ -1,95 +1,120 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { motion, useMotionValue, useSpring } from "framer-motion"
-import { cn } from "@/lib/utils"
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import {
+  SiPython,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiTailwindcss,
+  SiFramer,
+  SiMongodb,
+  SiPostgresql,
+  SiFirebase,
+  SiSupabase,
+  SiVercel,
+  SiGit,
+  SiGithub,
+  SiDocker,
+  SiSocketdotio,
+  SiAmazonwebservices,
+  SiNeo4J,
+  SiStreamlit,
+  SiPostman,
+  SiClerk,
+  SiShadcnui,
+  SiRedis,
+  SiPrisma,
+  SiGraphql,
+  SiWebpack,
+  SiFigma,
+} from "react-icons/si";
 
 type Skill = {
-  label: string
-  icon?: React.ReactNode
-  accent?: "default" | "yellow" | "blue"
-}
+  label: string;
+  icon?: React.ReactNode;
+};
 
-function SkillPill({ label, icon, accent = "default" }: Skill) {
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-  const xSpring = useSpring(x, { stiffness: 420, damping: 32 })
-  const ySpring = useSpring(y, { stiffness: 420, damping: 32 })
-
+function SkillPill({ label, icon }: Skill) {
   return (
     <motion.div
       className={cn(
-        "relative select-none cursor-grab active:cursor-grabbing",
-        "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium",
-        "bg-white text-slate-800 border-slate-200 shadow-[0_1px_0_0_rgba(0,0,0,0.05)] ring-1 ring-inset ring-black/[0.02]",
-        "dark:bg-slate-900 dark:text-slate-100 dark:border-slate-700 dark:ring-white/[0.04]",
+        "relative select-none",
+        "inline-flex items-center gap-1.5 rounded-sm border px-1 py-0.25 text-xs font-medium",
+        "bg-white text-neutral-600 border-neutral-200",
+        "dark:bg-neutral-950 dark:text-neutral-300 dark:border-neutral-800"
       )}
-      style={{ x: xSpring, y: ySpring }}
-      drag
-      dragElastic={0.2}
-      dragMomentum={0.25}
-      onDrag={(event, info) => {
-        x.set(info.offset.x)
-        y.set(info.offset.y)
-      }}
-      onDragEnd={() => {
-        x.set(0)
-        y.set(0)
-      }}
-      whileTap={{ scale: 1.05 }}
-      transition={{ type: "spring", stiffness: 520, damping: 34 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 400, damping: 25 }}
       aria-label={label}
-      role="button"
     >
-      <span
-        className={cn(
-          "h-1.5 w-1.5 rounded-full",
-          accent === "yellow" && "bg-yellow-400 dark:bg-yellow-300",
-          accent === "blue" && "bg-blue-500 dark:bg-blue-400",
-          accent === "default" && "bg-slate-400 dark:bg-slate-300",
-        )}
+      <div
+        className="h-3 w-3 flex items-center justify-center"
         aria-hidden="true"
-      />
+      >
+        {icon}
+      </div>
       <span className="leading-none">{label}</span>
     </motion.div>
-  )
+  );
 }
 
 export function SkillsDraggable() {
   const skills: Skill[] = [
-    { label: "React", accent: "blue" },
-    { label: "Next.js" },
-    { label: "TypeScript" },
-    { label: "Node.js" },
-    { label: "MongoDB" },
-    { label: "JavaScript", accent: "yellow" },
-    { label: "Postman API" },
-    { label: "Supabase" },
-    { label: "Clerk" },
-    { label: "Tailwind CSS" },
-    { label: "Express" },
-    { label: "PostgreSQL" },
-    { label: "Socket.io" },
-    { label: "AWS" },
-    { label: "Shadcn UI" },
-  ]
+    { label: "Python", icon: <SiPython className="h-3 w-3" /> },
+    { label: "JavaScript", icon: <SiJavascript className="h-3 w-3" /> },
+    { label: "TypeScript", icon: <SiTypescript className="h-3 w-3" /> },
+    { label: "React.js", icon: <SiReact className="h-3 w-3" /> },
+    { label: "PostgreSQL", icon: <SiPostgresql className="h-3 w-3" /> },
+    { label: "Firebase", icon: <SiFirebase className="h-3 w-3" /> },
+    { label: "Supabase", icon: <SiSupabase className="h-3 w-3" /> },
+    { label: "Next.js", icon: <SiNextdotjs className="h-3 w-3" /> },
+    { label: "Node.js", icon: <SiNodedotjs className="h-3 w-3" /> },
+    { label: "Express.js", icon: <SiExpress className="h-3 w-3" /> },
+    { label: "Tailwind CSS", icon: <SiTailwindcss className="h-3 w-3" /> },
+    { label: "Framer Motion", icon: <SiFramer className="h-3 w-3" /> },
+    { label: "MongoDB", icon: <SiMongodb className="h-3 w-3" /> },
+    { label: "Vercel", icon: <SiVercel className="h-3 w-3" /> },
+    { label: "Git", icon: <SiGit className="h-3 w-3" /> },
+    { label: "GitHub", icon: <SiGithub className="h-3 w-3" /> },
+    { label: "Docker", icon: <SiDocker className="h-3 w-3" /> },
+    { label: "Socket.io", icon: <SiSocketdotio className="h-3 w-3" /> },
+    { label: "AWS", icon: <SiAmazonwebservices className="h-3 w-3" /> },
+    { label: "Neo4j", icon: <SiNeo4J className="h-3 w-3" /> },
+    { label: "Streamlit", icon: <SiStreamlit className="h-3 w-3" /> },
+    { label: "Postman API", icon: <SiPostman className="h-3 w-3" /> },
+    { label: "Clerk", icon: <SiClerk className="h-3 w-3" /> },
+    { label: "Shadcn UI", icon: <SiShadcnui className="h-3 w-3" /> },
+    { label: "Redis", icon: <SiRedis className="h-3 w-3" /> },
+    { label: "Prisma", icon: <SiPrisma className="h-3 w-3" /> },
+    { label: "GraphQL", icon: <SiGraphql className="h-3 w-3" /> },
+    { label: "Webpack", icon: <SiWebpack className="h-3 w-3" /> },
+    { label: "Figma", icon: <SiFigma className="h-3 w-3" /> },
+  ];
 
   return (
     <div className="mt-4">
       <div className="mb-2 flex items-center justify-between">
-        <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">Skills</h3>
+        <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+          Skills
+        </h3>
         <div className="pointer-events-none hidden text-[10px] text-slate-500 dark:text-slate-400 sm:block">
-          drag me!
+          hover
         </div>
       </div>
       <div className={cn("relative flex flex-wrap gap-2")}>
-        {skills.map((s) => (
+        {skills.map(s => (
           <SkillPill key={s.label} {...s} />
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default SkillsDraggable
+export default SkillsDraggable;

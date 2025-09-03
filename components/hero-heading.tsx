@@ -1,14 +1,14 @@
-import Image from "next/image"
+import Image from "next/image";
 
 type HeroHeadingProps = {
-  name: string
-  subtitle?: string
-  avatarSrc?: string
-}
+  name: string;
+  subtitle?: string;
+  avatarSrc?: string;
+};
 
 export function HeroHeading({
   name,
-  subtitle = "Full‑stack developer who loves building efficient, scalable, and intuitive applications.",
+  subtitle = "Full Stack Developer from India",
   avatarSrc = "/developer-avatar.png",
 }: HeroHeadingProps) {
   return (
@@ -26,9 +26,15 @@ export function HeroHeading({
           height={48}
           className="rounded-full ring-1 ring-black/10 dark:ring-white/10"
         />
-        <h1 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground">{name}</h1>
+        <h1 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
+          {name}
+        </h1>
       </div>
-      {subtitle ? <p className="mt-3 text-sm leading-6 text-muted-foreground max-w-prose">{subtitle}</p> : null}
+      {subtitle ? (
+        <p className="mt-3 text-sm leading-6 text-muted-foreground max-w-prose">
+          {subtitle}
+        </p>
+      ) : null}
     </header>
-  )
+  );
 }
