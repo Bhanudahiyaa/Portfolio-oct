@@ -301,7 +301,7 @@ export default function Page() {
                   <AchievementItem
                     title="Maharaja Agrasen Institute of Technology"
                     date="2023 – 2027"
-                    description="B.Tech in Computer Science"
+                    description="B.Tech in ECE"
                   />
                 </li>
                 <li>
@@ -347,7 +347,7 @@ export default function Page() {
               {/* Social row */}
               <div className="mt-4 flex items-center justify-center gap-2 sm:gap-4 text-neutral-600 dark:text-neutral-300">
                 <a
-                  href="https://twitter.com/your_handle"
+                  href="https://twitter.com/iBhanuDahiya"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Twitter"
@@ -356,7 +356,7 @@ export default function Page() {
                   <Twitter className="h-4 w-4" />
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/bhanudahiyaa"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="GitHub"
