@@ -195,11 +195,11 @@ export default function Page() {
                   title="Market Pulse"
                   links={[
                     {
-                      label: "live preview ↗",
+                      label: "live preview 🔗",
                       href: "https://call2-codecore4.vercel.app/",
                     },
                     {
-                      label: "github ↗",
+                      label: "github 🔗",
                       href: "https://github.com/Bhanudahiyaa/Call2Code",
                     },
                   ]}
@@ -214,11 +214,11 @@ export default function Page() {
                   title="SQL QueryPilot"
                   links={[
                     {
-                      label: "live preview ↗",
+                      label: "live preview 🔗",
                       href: "https://sql-querypilot.streamlit.app/",
                     },
                     {
-                      label: "github ↗",
+                      label: "github 🔗",
                       href: "https://github.com/Bhanudahiyaa/SQL-QueryPilot",
                     },
                   ]}
@@ -233,11 +233,11 @@ export default function Page() {
                   title="Personal Finance Tracker"
                   links={[
                     {
-                      label: "live preview ↗",
+                      label: "live preview 🔗",
                       href: "https://ledger-uwu-znsd.vercel.app/",
                     },
                     {
-                      label: "github ↗",
+                      label: "github 🔗",
                       href: "https://github.com/Bhanudahiyaa/Ledger-uwu",
                     },
                   ]}
