@@ -2,6 +2,10 @@ import Link from "next/link";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { TextShimmer } from "@/components/ui/text-shimmer";
+import { Typewriter } from "@/components/ui/typewriter";
+import { TimeCounter } from "@/components/time-counter";
 
 import { WorkItem } from "@/components/work-item";
 import { ProjectListItem } from "@/components/project-list-item";
@@ -63,17 +67,27 @@ export default function Page() {
             <SlideUp>
               <header id="about" className="space-y-2 section-lines p-4">
                 <FadeInText delay={0.1}>
-                  <p className="text-xs text-neutral-500">hi there 😊, I'm</p>
+                  <div className="flex items-center justify-between">
+                    <TextShimmer
+                      as="p"
+                      className="text-xs"
+                      duration={2.2}
+                      spread={1.2}
+                    >
+                      hi there, I'm
+                    </TextShimmer>
+                    <TimeCounter className="text-xs text-neutral-500 dark:text-neutral-400 font-mono" />
+                  </div>
                 </FadeInText>
                 <SlideInLeft delay={0.2}>
                   <div className="flex items-center gap-3">
-                    <Avatar className="h-16 w-16 ring-2 ring-neutral-200 dark:ring-neutral-900">
-                      <AvatarImage
-                        src="https://media.licdn.com/dms/image/v2/D4E03AQFoa40cJ2WOMA/profile-displayphoto-scale_400_400/B4EZgKXbIXGoAo-/0/1752520570498?e=1759968000&v=beta&t=cckryikVjD2X7Nvhcmw5I8B1w6sQofIPdTWlpbmkDSU"
+                    <div className="h-16 w-16 ring-2 ring-neutral-200 dark:ring-neutral-900 rounded-full overflow-hidden">
+                      <img
+                        src="/facedemo.jpeg"
                         alt="Bhanu Pratap Singh"
+                        className="h-full w-full object-cover scale-115 -translate-x-0.5"
                       />
-                      <AvatarFallback>BP</AvatarFallback>
-                    </Avatar>
+                    </div>
                     <h1 className="text-2xl md:text-3xl font-medium tracking-tight text-neutral-900 dark:text-neutral-50">
                       Bhanu Pratap Singh
                     </h1>
@@ -84,7 +98,21 @@ export default function Page() {
                     <span>20, he/him</span>
                     <span className="hidden sm:inline">{"||"}</span>
                     <span className="max-w-[38ch]">
-                      Full Stack Developer from India.
+                      <Typewriter
+                        text={[
+                          "Full Stack Developer",
+                          "Product Engineer",
+                          "Freelancer",
+                          "Shitposter",
+                        ]}
+                        speed={90}
+                        waitTime={2000}
+                        deleteSpeed={80}
+                        className="text-neutral-600 dark:text-neutral-300"
+                        cursorChar="|"
+                        showCursor={true}
+                      />
+                      {" from India."}
                     </span>
                   </div>
                 </FadeInText>
@@ -197,20 +225,30 @@ export default function Page() {
                       company="Stealth"
                       role="Founding Engineer"
                       period="August 2025 – Present"
-                      summary="Built the backend from scratch and architected a scalable, production-ready platform, implementing robust development workflows and optimized system architecture."
-                      logoUrl="https://media.licdn.com/dms/image/v2/D560BAQGZmytIy-1DPA/company-logo_100_100/B56ZZYBgQTGUAQ-/0/1745233511985/timelyai_logo?e=1759968000&v=beta&t=8s7TdAMSna9DLYYarkHC5TiVmxqvQojuUeKOZTdzYkg"
+                      summary="Built the backend from scratch and architected a scalable, production ready platform, implementing robust development workflows and optimized system architecture."
+                      logoUrl="/stealth.jpeg"
                     />
                   </SlideInLeft>
                   <SlideInRight delay={0.1}>
                     <WorkItem
+                      icon="zap"
+                      company="LuxLLM"
+                      role="Full Stack Developer"
+                      period="June 2025 – August 2025"
+                      summary="Engineered and optimized LLM integrations infrastructure for seamless, enterprise ready deployment and improved user experience."
+                      logoUrl="/luxllm.png"
+                    />
+                  </SlideInRight>
+                  <SlideInLeft delay={0.1}>
+                    <WorkItem
                       icon="building"
                       company="FirstContact"
                       role="Backend Intern"
-                      period="June 2025 – August 2025"
-                      summary="Maintained backend for dynamic CMS content and workflows, fixed server-side bugs, and optimized data handling to reduce downtime."
-                      logoUrl="https://media.licdn.com/dms/image/v2/C4D0BAQHKECKlMF9lJA/company-logo_200_200/company-logo_200_200/0/1674622682688/first_contact_lgbt_logo?e=1759968000&v=beta&t=nWT0dmlKCxa7Sdl2Wq3K5d1xFlclzNANqvS94Cx2Y7s"
+                      period="April 2025 – June 2025"
+                      summary="Maintained backend for dynamic CMS content and workflows, fixed server side bugs, and optimized data handling to reduce downtime."
+                      logoUrl="/firstcontact.jpeg"
                     />
-                  </SlideInRight>
+                  </SlideInLeft>
                 </div>
               </section>
             </SlideUp>
@@ -463,6 +501,11 @@ export default function Page() {
             </SlideUp>
           </div>
         </article>
+        <div className="mt-8 flex justify-center rounded-xl py-2  border border-neutral-200 bg-white shadow-sm dark:border-neutral-800 dark:bg-neutral-950 ">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 section-lines p-2">
+            Never forget, why you started <span aria-hidden>❤️</span>
+          </p>
+        </div>{" "}
       </div>
 
       {/* Floating Dock */}

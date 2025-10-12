@@ -42,7 +42,7 @@ export function WorkItem({
             <h4 className="text-sm font-semibold text-neutral-900 dark:text-neutral-50 flex-1 min-w-0">
               {company}
             </h4>
-            <span className="text-xs rounded-full border border-neutral-200 bg-neutral-50 px-2 py-1 text-neutral-600 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300 whitespace-nowrap flex-shrink-0 self-start">
+            <span className="text-xs rounded-md border border-neutral-200 bg-neutral-50 px-1.5 py-1 text-neutral-600 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300 whitespace-nowrap flex-shrink-0 self-start">
               {period}
             </span>
           </div>
