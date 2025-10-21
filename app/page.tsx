@@ -229,16 +229,6 @@ export default function Page() {
                       logoUrl="/stealth.jpeg"
                     />
                   </SlideInLeft>
-                  <SlideInRight delay={0.1}>
-                    <WorkItem
-                      icon="zap"
-                      company="LuxLLM"
-                      role="Full Stack Developer"
-                      period="June 2025 – August 2025"
-                      summary="Engineered and optimized LLM integrations infrastructure for seamless, enterprise ready deployment and improved user experience."
-                      logoUrl="/luxllm.png"
-                    />
-                  </SlideInRight>
                   <SlideInLeft delay={0.1}>
                     <WorkItem
                       icon="building"
@@ -503,7 +493,7 @@ export default function Page() {
         </article>
         <div className="mt-8 flex justify-center rounded-xl py-2  border border-neutral-200 bg-white shadow-sm dark:border-neutral-800 dark:bg-neutral-950 ">
           <p className="text-xs text-neutral-500 dark:text-neutral-400 section-lines p-2">
-            Never forget, why you started <span aria-hidden>❤️</span>
+            <span className="italic">Never forget, why you started</span> <span aria-hidden> ❤️</span>
           </p>
         </div>{" "}
       </div>

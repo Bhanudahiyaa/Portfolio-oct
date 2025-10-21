@@ -26,5 +26,5 @@ export function TimeCounter({ className }: TimeCounterProps) {
     });
   };
 
-  return <span className={className}>{formatTime(time)}</span>;
+  return <span className={className} suppressHydrationWarning>{formatTime(time)}</span>;
 }

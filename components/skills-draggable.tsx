@@ -35,6 +35,7 @@ import {
   SiWebpack,
   SiFigma,
 } from "react-icons/si";
+import { FaTwitter } from "react-icons/fa";
 
 type Skill = {
   label: string;
@@ -96,6 +97,7 @@ export function SkillsDraggable() {
     { label: "GraphQL", icon: <SiGraphql className="h-3 w-3" /> },
     { label: "Webpack", icon: <SiWebpack className="h-3 w-3" /> },
     { label: "Figma", icon: <SiFigma className="h-3 w-3" /> },
+    { label: "Shitposter", icon: <FaTwitter className="h-3 w-3" /> },
   ];
 
   return (
